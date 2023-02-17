@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: linear-gradient(to bottom, #051f3a, #0e3660dc);
+}
+
+h2 {
+    background-color: #0E3560;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.678);
+}
+
+#container {
+    margin: auto;
+    background-color: #c4a871f3;
+    width: 600px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.521);
+}
+
+input {
+    padding: 2px;
+    margin: 3px;
+    margin-top: 10px;
+}
+
+#container > p {
+    padding: 10px;
+    margin: 2px;
+}
+
+#botao{
+    text-align: center;
+}
+
+button {
+    width: 50px;
+    height: 30px;
+}
