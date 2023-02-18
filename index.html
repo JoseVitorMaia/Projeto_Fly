@@ -21,6 +21,8 @@
             <input type="radio" name="etapa" id="Lista/Robô" value="Lista/Robô">Lista/Robô
 
             <input type="radio" name="etapa" id="Gestão de Processos" value="Gestão de Processos">Gestão de Processos
+
+            <input type="radio" name="etapa" id="APP" value="APP">APP
         
             <input type="radio" name="etapa" id="Departamentos" value="Departamentos">Departamentos
             
@@ -28,15 +30,23 @@
            
         </p>
         <p>
-            Porcentagem de uso: <input type="text" id="uso" value="0" size="1px">
+            Porcentagem de uso: <input type="number" id="uso" value="" style="width: 60px" placeholder="%">
         </p>
 
         <p>
-            Quem participou dos treinamentos (Departamento): <input type="text" name="parcicipantes" id="parcicipantes" size="70">
+            Quem participou da consultoria/departamento: <input type="text" name="parcicipantes" id="parcicipantes" size="70">
         </p>
 
+        <h3>
+            Observações sobre a consultoria
+        </h3>
+
         <p>
-            Observações sobre o treinamento
+            Atrasaram? <br>
+            <input type="radio" name="horario" value="Não"> Não
+            <input type="radio" name="horario" value="10 minutos atrasados"> 10 min atrasados
+            <input type="radio" name="horario" value="15 minutos atrasados"> 15 min atrasados
+            <input type="radio" name="horario" value="20 minutos atrasados"> 20 min atrasados
         </p>
 
         <p>
@@ -49,7 +59,6 @@
             
             <input type="radio" name="atividades" id="" value="Nada">Nada
     
-            <input type="text" name="atividades" id="atividades" placeholder="outro...">
         </p>
 
         <p>
@@ -59,8 +68,6 @@
             <input type="radio" name="duvidas" id="" value="Algumas dúvidas">Algumas dúvidas
             
             <input type="radio" name="duvidas" id="" value="Bastante dificuldade">Bastante dificuldade
-
-            <input type="text" name="atividades" id="duvidas" placeholder="outro...">
         </p>
 
         <p>
@@ -72,8 +79,6 @@
             <input type="radio" name="participativos" id="" value="Pouco Participativos">Pouco Participativos
             
             <input type="radio" name="participativos" id="" value="Sem Participação">Sem Participação
-            
-            <input type="text" name="atividades" id="participativos" placeholder="outro...">
         </p>
 
         <p>
@@ -84,7 +89,6 @@
             
             <input type="radio" name="problema" id="" value="Insatisfação com o que viu ">Insatisfação com o que viu 
         
-            <input type="text" name="problema" id="problema" placeholder="outro...">
         </p>
 
         <p id="nota">
@@ -103,48 +107,15 @@
         </p>
 
         <p>
-            Considerações Adicionais: <input type="text" name="consideracoes" id="consideracoes" size="70">
+            Considerações Adicionais: <br><textarea name="consideracoes" id="consideracoes" cols="70" rows="7" placeholder="Preencher com observações pertinentes sobre esta consultoria para futuras consultas e auxílio nas próximas consultorias"></textarea>
         </p>
-
         <p id="botao">
             <button onclick="gerar()">Gerar</button>
         </p>
-
-        
-
-        
-        <p id="1">
-
+        <p id="final">          
         </p>
+   
 
-        <p id="2">
-
-        </p>
-        
-        <p id="3">
-
-        </p>    
-        <p id="4">
-
-        </p>
-
-        <p id="5">
-
-        </p>
-        
-        <p id="6">
-        </p>
-        <p id="7">
-
-        </p>    
-        
-        <p id="8">
-
-        </p>
-
-        <p id="9">
-
-        </p>
 
     </div>
 
