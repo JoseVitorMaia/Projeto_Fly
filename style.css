@@ -43,8 +43,8 @@ input {
 }
 
 #container > p {
-    padding: 10px;
-    margin: 2px;
+    padding: 9px;
+    margin: 0px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.137);
     border-bottom: 1px solid rgba(0, 0, 0, 0.116);
 }
@@ -53,21 +53,40 @@ textarea{
     padding: 5px;
 }
 
-
-
 #botao{
     text-align: center;
+    padding-top: 0px;
 }
 
-button {
-    width: 50px;
-    height: 30px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.267);
+h4 {
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right,transparent,#0c335e5d,transparent);
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-variant: small-caps;
 }
 
+p#finais{
+    padding: 5px 5px 0px 10px;
+}
 
-#final {
-    padding: 10px;
-    line-height: 1.7em;
-    white-space: pre-line;
+#consideracoes {
+    background-color: transparent;
+    border: 0px;
+    display: none;
+    resize: none;
+}
+
+img {
+    width: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
