@@ -10,16 +10,58 @@ let nota = document.getElementsByName('nota')
 let consideracoes = document.getElementById('consideracoes')
 let final = document.getElementById('final')
 let copiar = document.getElementById('copiar')
+let iniciais = document.getElementById('etapa1')
+let menuGeral = document.getElementById('menuGeral')
 
+let dono = document.getElementById('dono')
+let resp = document.getElementById('resp');
+let quem = document.getElementById('quem');
+let usuario = document.getElementById('usuario');
+let empresas = document.getElementById('empresas');
+let sistemaContabil = document.getElementById('sistemaContabil')
+let jaUsaram = document.getElementById('jaUsaram');
+let formas = document.getElementById('formas');
+let maioriaRegimes = document.getElementById('maioriaRegimes');
+let valor = document.getElementById('valor');
+
+
+function etapa1(){
+    consideracoes.innerHTML = '';
+    iniciais.style.display = "block"
+    menuGeral.style.display = "none"
+    consideracoes.style.display = "block"
+    botao1.style.display = "inline"
+    botao2.style.display = "none"
+}
+
+function gerar1(){
+    consideracoes.innerHTML = '';
+
+    consideracoes.innerHTML += '- Dono do escritório : ' + dono.value + "\n"
+    consideracoes.innerHTML += '- Responsavel Técnico : ' + resp.value + "\n"
+    consideracoes.innerHTML += '- Quem participou da consultoria : ' + quem.value + "\n"
+    consideracoes.innerHTML += '- Usuários aprox: ' + usuario.value + "\n"
+    consideracoes.innerHTML += '- Empresas aprox : ' + empresas.value + "\n"
+    consideracoes.innerHTML += '- Sistema Contábil : ' + sistemaContabil.value + "\n"
+    consideracoes.innerHTML += '- Ja usaram sistema de gestão : ' + jaUsaram.value + "\n"
+    consideracoes.innerHTML += '- Forma de entrega:(se recebem por email wpp ou físico) : ' + formas.value + "\n"
+    consideracoes.innerHTML += '- Qual a maioria dos regimes tributários : ' + maioriaRegimes.value + "\n"
+    consideracoes.innerHTML += '- Valor da Acessórias mais chamou atenção : ' + valor.value + "\n"
+    consideracoes.innerHTML += '- Considerações adicionais: ' + "\n"
+}
 
 function gerar(){
-    consideracoes.style.display = "block"
     consideracoes.innerHTML = '';
+    iniciais.style.display = "none"
+    menuGeral.style.display = "block"
+    consideracoes.style.display = "block"
+    botao1.style.display = "none"
+    botao2.style.display = "inline"
+    
     
 
     for (var i = 0 in etapa)
-        if (etapa[i].checked)
-        
+        if (etapa[i].checked) 
         consideracoes.innerHTML += '- Qual etapa da consultoria: ' + etapa[i].value + "\n"
         
         
@@ -40,9 +82,9 @@ function gerar(){
         if (duvidas[i].checked)
         consideracoes.innerHTML += '- Dúvidas/Dificuldades da etapa anterior: ' +  duvidas[i].value + "\n"
 
-        for (var i = 0 in participativos)
-            if (participativos[i].checked)
-            consideracoes.innerHTML += '- Participativos: ' + participativos[i].value + "\n"
+    for (var i = 0 in participativos)
+        if (participativos[i].checked)
+        consideracoes.innerHTML += '- Participativos: ' + participativos[i].value + "\n"
 
     for (var i = 0 in problema)
         if (problema[i].checked)

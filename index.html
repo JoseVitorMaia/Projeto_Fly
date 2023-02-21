@@ -12,99 +12,143 @@
         <h2 id="titulo">Fly Acessórias</h2>
 
         <p id="etapa">
-            <input type="radio" name="etapa" id="Configurações Iniciais" value="Configurações Iniciais">Configurações Iniciais
+            <input type="radio" name="etapa" id="Configurações Iniciais" value="Configurações Iniciais" onchange="etapa1()">Configurações Iniciais
             
-            <input type="radio" name="etapa" id="Lista de Entregas" value="Lista de Entregas">Lista de Entregas
+            <input type="radio" name="etapa" id="Lista de Entregas" value="Lista de Entregas" onchange="gerar()">Lista de Entregas
             
-            <input type="radio" name="etapa" id="Robô" value="Robô">Robô
+            <input type="radio" name="etapa" id="Robô" value="Robô" onchange="gerar()">Robô
             
-            <input type="radio" name="etapa" id="Lista/Robô" value="Lista/Robô">Lista/Robô
+            <input type="radio" name="etapa" id="Lista/Robô" value="Lista/Robô" onchange="gerar()">Lista/Robô
 
-            <input type="radio" name="etapa" id="Gestão de Processos" value="Gestão de Processos">Gestão de Processos
+            <input type="radio" name="etapa" id="Gestão de Processos" value="Gestão de Processos" onchange="gerar()">Gestão de Processos
 
-            <input type="radio" name="etapa" id="APP" value="APP">APP
+            <input type="radio" name="etapa" id="APP" value="APP" onchange="gerar()">APP
         
-            <input type="radio" name="etapa" id="Departamentos" value="Departamentos">Departamentos
+            <input type="radio" name="etapa" id="Departamentos" value="Departamentos" onchange="gerar()">Departamentos
             
-            <input type="radio" name="etapa" id="Tira Dúvidas" value="Tira Dúvidas">Tira Dúvidas
+            <input type="radio" name="etapa" id="Tira Dúvidas" value="Tira Dúvidas" onchange="gerar()">Tira Dúvidas
+
+            <input type="radio" name="etapa" id="Migração" value="Migração" onchange="gerar()">Migração
            
         </p>
-        <p>
-            Porcentagem de uso: <input type="number" id="uso" value="" style="width: 60px" placeholder="%">
-        </p>
-
-        <p>
-            Quem participou da consultoria/departamento: <input type="text" name="parcicipantes" id="parcicipantes" size="70">
-        </p>
-
-        <h3>
-            Observações sobre a consultoria
-        </h3>
-
-        <p>
-            Atrasaram? <br>
-            <input type="radio" name="horario" value="Não"> Não
-            <input type="radio" name="horario" value="10 minutos atrasados"> 10 min atrasados
-            <input type="radio" name="horario" value="15 minutos atrasados"> 15 min atrasados
-            <input type="radio" name="horario" value="20 minutos atrasados"> 20 min atrasados
-        </p>
-
-        <p>
-            Realizaram as atividades anteriores? <br>
-            <input type="radio" name="atividades" id="" value="Sim, a maioria">Sim, a maioria
+        <article id="menuGeral">
+            <p>
+                Porcentagem de uso: <input type="number" id="uso" value="" style="width: 60px" placeholder="%">
+            </p>
+            <p>
+                Quem participou da consultoria/departamento: <input type="text" name="parcicipantes" id="parcicipantes" size="70">
+            </p>
+            <h3>
+                Observações sobre a consultoria
+            </h3>
+            <p>
+                Atrasaram? <br>
+                <input type="radio" name="horario" value="Não"> Não
+                <input type="radio" name="horario" value="10 minutos atrasados"> 10 min atrasados
+                <input type="radio" name="horario" value="15 minutos atrasados"> 15 min atrasados
+                <input type="radio" name="horario" value="20 minutos atrasados"> 20 min atrasados
+            </p>
+            <p>
+                Realizaram as atividades anteriores? <br>
+                <input type="radio" name="atividades" id="" value="Sim, a maioria">Sim, a maioria
             
-            <input type="radio" name="atividades" id="" value="Em partes">Em partes
+                <input type="radio" name="atividades" id="" value="Em partes">Em partes
             
-            <input type="radio" name="atividades" id="" value="Pouco">Pouco
+                <input type="radio" name="atividades" id="" value="Pouco">Pouco
             
-            <input type="radio" name="atividades" id="" value="Nada">Nada
+                <input type="radio" name="atividades" id="" value="Nada">Nada
+            </p>
+            <p>
+                Dúvidas/Dificuldades da etapa anterior? <br>
+                <input type="radio" name="duvidas" id="" value="Não, entenderam bem">Não, entenderam bem
+            
+                <input type="radio" name="duvidas" id="" value="Algumas dúvidas">Algumas dúvidas
+            
+                <input type="radio" name="duvidas" id="" value="Bastante dificuldade">Bastante dificuldade
+            </p>
+            <p>
+                Participativos? <br>
+                <input type="radio" name="participativos" id="" value="Bem Participativos">Bem Participativos
+            
+                <input type="radio" name="participativos" id="" value="Participativos">Participativos
+            
+                <input type="radio" name="participativos" id="" value="Pouco Participativos">Pouco Participativos
+            
+                <input type="radio" name="participativos" id="" value="Sem Participação">Sem Participação
+            </p>
+            <p>
+                Algum problema? <br>
+                <input type="radio" name="problema" id="" value="Não">Não
+            
+                <input type="radio" name="problema" id="" value="Dificuldade de Aprendizagem">Dificuldade de Aprendizagem
+            
+                <input type="radio" name="problema" id="" value="Insatisfação com o que viu ">Insatisfação com o que viu
+            
+            </p>
+
+            <p id="nota">
+                Nota para a consultoria: 
+                <input type="radio" name="nota" id="" value="1">1
+                <input type="radio" name="nota" id="" value="2">2
+                <input type="radio" name="nota" id="" value="3">3
+                <input type="radio" name="nota" id="" value="4">4
+                <input type="radio" name="nota" id="" value="5">5
+                <input type="radio" name="nota" id="" value="6">6
+                <input type="radio" name="nota" id="" value="7">7
+                <input type="radio" name="nota" id="" value="8">8
+                <input type="radio" name="nota" id="" value="9">9
+                <input type="radio" name="nota" id="" value="10">10
     
-        </p>
+            </p>
+        </article>
 
-        <p>
-            Dúvidas/Dificuldades da etapa anterior? <br>
-            <input type="radio" name="duvidas" id="" value="Não, entenderam bem">Não, entenderam bem
-            
-            <input type="radio" name="duvidas" id="" value="Algumas dúvidas">Algumas dúvidas
-            
-            <input type="radio" name="duvidas" id="" value="Bastante dificuldade">Bastante dificuldade
-        </p>
+        <article id="etapa1">
+            <p>Dono do escritório :
+                <input type="text"  id="dono">
+            </p>
 
-        <p>
-            Participativos? <br>
-            <input type="radio" name="participativos" id="" value="Bem Participativos">Bem Participativos
-            
-            <input type="radio" name="participativos" id="" value="Participativos">Participativos
-            
-            <input type="radio" name="participativos" id="" value="Pouco Participativos">Pouco Participativos
-            
-            <input type="radio" name="participativos" id="" value="Sem Participação">Sem Participação
-        </p>
+            <p>Responsavel Técnico :
+                <input type="text"  id="resp">
+            </p>
 
-        <p>
-            Algum problema? <br>
-            <input type="radio" name="problema" id="" value="Não">Não
-            
-            <input type="radio" name="problema" id="" value="Dificuldade de Aprendizagem">Dificuldade de Aprendizagem
-            
-            <input type="radio" name="problema" id="" value="Insatisfação com o que viu ">Insatisfação com o que viu 
-        
-        </p>
+            <p>Quem participou dos treinamentos :
+                <input type="text" id="quem">
+            </p>
 
-        <p id="nota">
-            Nota para a consultoria: 
-            <input type="radio" name="nota" id="" value="1">1
-            <input type="radio" name="nota" id="" value="2">2
-            <input type="radio" name="nota" id="" value="3">3
-            <input type="radio" name="nota" id="" value="4">4
-            <input type="radio" name="nota" id="" value="5">5
-            <input type="radio" name="nota" id="" value="6">6
-            <input type="radio" name="nota" id="" value="7">7
-            <input type="radio" name="nota" id="" value="8">8
-            <input type="radio" name="nota" id="" value="9">9
-            <input type="radio" name="nota" id="" value="10">10
+            <p>Usuários aprox: 
+                <input type="number" id="usuario" style="width: 60px">
+            </p>
 
-        </p>
+            <p>Empresas aprox: 
+                <input type="number" id="empresas" style="width: 60px">
+            </p>
+
+            <p>Sistema Contábil: 
+                <input type="text" id="sistemaContabil">    
+            </p>
+
+            <p>Ja usaram sistema de gestão: 
+                <input type="text" id="jaUsaram">    
+            </p>
+
+            <p>Forma de entrega:(se recebem por email wpp ou físico): 
+                <input type="text" id="formas">
+            </p>
+
+            <p>Qual a maioria dos regimes tributários: 
+                <input type="text" id="maioriaRegimes">
+            </p>
+
+            <p>Valor da Acessórias mais chamou atenção: 
+                <input type="text" id="valor" size="35">
+            </p>
+
+        </article>
+
+        <article id="migração">
+
+        </article>
+
 
         <h4>
             Considerações Finais
@@ -114,7 +158,8 @@
     
         </p>
         <p id="botao">
-            <abbr title="Gerar"><img src="gerar.png" alt="gerar" onclick="gerar()"></abbr>
+            <abbr title="Gerar"><img src="gerar2.png" alt="gerar" onclick="gerar1()" id="botao1"></abbr>
+            <abbr title="Gerar"><img src="gerar.png" alt="gerar" onclick="gerar()" id="botao2"></abbr>
             <abbr title="Copiar"><img src="copiar.png" alt="copiar" onclick="copiarTexto()"></abbr>
         </p>
         
