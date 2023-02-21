@@ -25,13 +25,85 @@ let maioriaRegimes = document.getElementById('maioriaRegimes');
 let valor = document.getElementById('valor');
 
 
+let migracao = document.getElementById('migração')
+let valorMigra = document.getElementById('valorMigra')
+let referenciaMigra = document.getElementById('referenciaMigra')
+let formaContato = document.getElementById('formaContato')
+let equipeEngajada = document.getElementById('equipeEngajada')
+let dispensaMassa = document.getElementById('dispensaMassa')
+let erp = document.getElementById('erp')
+let smtp = document.getElementById('smtp')
+let regUso = document.getElementById('regUso')
+let acesso = document.getElementById('acesso')
+let entregas = document.getElementById('entregas')
+let robo = document.getElementById('robo')
+let gestao = document.getElementById('gestao')
+let app = document.getElementById('app')
+let apla = document.getElementById('apla')
+
+
+
 function etapa1(){
     consideracoes.innerHTML = '';
+
     iniciais.style.display = "block"
     menuGeral.style.display = "none"
+    migracao.style.display = "none"
+
     consideracoes.style.display = "block"
+
     botao1.style.display = "inline"
     botao2.style.display = "none"
+    botao3.style.display = "none"
+}
+
+
+function demaisEtapas(){
+    //consideracoes.innerHTML = '';
+
+    migracao.style.display = "none"
+    iniciais.style.display = "none"
+    menuGeral.style.display = "block"
+
+    consideracoes.style.display = "block"
+
+    botao1.style.display = "none"
+    botao2.style.display = "inline"
+    botao3.style.display = "none"
+}
+
+function migração(){
+    consideracoes.innerHTML = '';
+
+    migracao.style.display = "block"
+    iniciais.style.display = "none"
+    menuGeral.style.display = "none"
+
+    consideracoes.style.display = "block"
+
+    botao1.style.display = "none"
+    botao2.style.display = "none"
+    botao3.style.display = "inline"
+}
+
+function botaoMigração(){
+    consideracoes.innerHTML = '';
+
+    consideracoes.innerHTML += '- Valor do Acessórias: ' + valorMigra.value +  "\n"
+    consideracoes.innerHTML += '- Referencia técnica e seu departamento: ' + referenciaMigra.value + "\n"
+    consideracoes.innerHTML += '- Melhor forma de contato: ' + formaContato.value + "\n"
+    consideracoes.innerHTML += '- Equipe engajada? Quais?: ' + equipeEngajada.value + "\n"
+    consideracoes.innerHTML += '- Dispensa em massa: ' + dispensaMassa.value + "\n"
+    consideracoes.innerHTML += '- ERP: ' + erp.value + "\n"
+    consideracoes.innerHTML += '- SMTP Ativo:' + smtp.value + "\n"
+    consideracoes.innerHTML += '- Uso:' + regUso.value + '%' + "\n"
+    consideracoes.innerHTML += '- Acesso:' + acesso.value + '%' + "\n"
+    consideracoes.innerHTML += '- Entregas: ' + entregas.value + '%' + "\n"
+    consideracoes.innerHTML += '- Robô: ' + robo.value + '%' + "\n"
+    consideracoes.innerHTML += '- Gestão de Processos:' + gestao.value + "\n"
+    consideracoes.innerHTML += '- APP: ' + app.value + "\n"
+    consideracoes.innerHTML += '- APLA:' + apla.value + "\n"
+    consideracoes.innerHTML += '- Considerações adicionais: '
 }
 
 function gerar1(){
@@ -47,18 +119,11 @@ function gerar1(){
     consideracoes.innerHTML += '- Forma de entrega:(se recebem por email wpp ou físico) : ' + formas.value + "\n"
     consideracoes.innerHTML += '- Qual a maioria dos regimes tributários : ' + maioriaRegimes.value + "\n"
     consideracoes.innerHTML += '- Valor da Acessórias mais chamou atenção : ' + valor.value + "\n"
-    consideracoes.innerHTML += '- Considerações adicionais: ' + "\n"
+    consideracoes.innerHTML += '- Considerações adicionais: '
 }
 
 function gerar(){
     consideracoes.innerHTML = '';
-    iniciais.style.display = "none"
-    menuGeral.style.display = "block"
-    consideracoes.style.display = "block"
-    botao1.style.display = "none"
-    botao2.style.display = "inline"
-    
-    
 
     for (var i = 0 in etapa)
         if (etapa[i].checked) 
@@ -94,7 +159,7 @@ function gerar(){
         if (nota[i].checked)
         consideracoes.innerHTML += '- Nota para a consultoria: '  + nota[i].value + "\n"
     
-    consideracoes.innerHTML += '- Considerações adicionais: ' + "\n"
+    consideracoes.innerHTML += '- Considerações adicionais: '
  
 }
 

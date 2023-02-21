@@ -14,21 +14,21 @@
         <p id="etapa">
             <input type="radio" name="etapa" id="Configurações Iniciais" value="Configurações Iniciais" onchange="etapa1()">Configurações Iniciais
             
-            <input type="radio" name="etapa" id="Lista de Entregas" value="Lista de Entregas" onchange="gerar()">Lista de Entregas
+            <input type="radio" name="etapa" id="Lista de Entregas" value="Lista de Entregas" onchange="demaisEtapas()">Lista de Entregas
             
-            <input type="radio" name="etapa" id="Robô" value="Robô" onchange="gerar()">Robô
+            <input type="radio" name="etapa" id="Robô" value="Robô" onchange="demaisEtapas()">Robô
             
-            <input type="radio" name="etapa" id="Lista/Robô" value="Lista/Robô" onchange="gerar()">Lista/Robô
+            <input type="radio" name="etapa" id="Lista/Robô" value="Lista/Robô" onchange="demaisEtapas()">Lista/Robô
 
-            <input type="radio" name="etapa" id="Gestão de Processos" value="Gestão de Processos" onchange="gerar()">Gestão de Processos
+            <input type="radio" name="etapa" id="Gestão de Processos" value="Gestão de Processos" onchange="demaisEtapas()">Gestão de Processos
 
-            <input type="radio" name="etapa" id="APP" value="APP" onchange="gerar()">APP
+            <input type="radio" name="etapa" id="APP" value="APP" onchange="demaisEtapas()">APP
         
-            <input type="radio" name="etapa" id="Departamentos" value="Departamentos" onchange="gerar()">Departamentos
+            <input type="radio" name="etapa" id="Departamentos" value="Departamentos" onchange="demaisEtapas()">Departamentos
             
-            <input type="radio" name="etapa" id="Tira Dúvidas" value="Tira Dúvidas" onchange="gerar()">Tira Dúvidas
+            <input type="radio" name="etapa" id="Tira Dúvidas" value="Tira Dúvidas" onchange="demaisEtapas()">Tira Dúvidas
 
-            <input type="radio" name="etapa" id="Migração" value="Migração" onchange="gerar()">Migração
+            <input type="radio" name="etapa" id="Migração" value="Migração" onchange="migração()">Migração
            
         </p>
         <article id="menuGeral">
@@ -111,7 +111,7 @@
                 <input type="text"  id="resp">
             </p>
 
-            <p>Quem participou dos treinamentos :
+            <p>Quem participou da consultoria :
                 <input type="text" id="quem">
             </p>
 
@@ -146,6 +146,48 @@
         </article>
 
         <article id="migração">
+            <p>Valor do Acessórias:
+                <input type="text" name="valorMigra" id="valorMigra" style="width: 385px">
+            </p>
+
+            <p>Referencia técnica e seu departamento:
+                <input type="text" name="referenciaMigra" id="referenciaMigra" style="width: 265px">
+            </p>
+
+            <p>Melhor forma de contato: 
+                <input type="text" name="formaContato" id="formaContato" style="width: 350px">
+            </p>
+
+            <p>Equipe engajada? Quais?:
+                <input type="text" name="equipeEngajada" id="equipeEngajada" style="width: 350px">
+            </p>
+
+            <p>Dispensa em massa?
+                <input type="text" name="dispensaMassa" id="dispensaMassa" style="width: 70px">
+            </p>
+
+            <p>ERP:
+                <input type="text" name="erp" id="erp">
+            </p>
+
+            <p>SMTP Ativo:
+                <input type="text" name="smtp" id="smtp" style="width: 115px">
+            </p>
+
+            <h3>Registro de uso</h3>
+
+            <p> 
+                Uso:<input type="number" name="regUso" id="regUso" style="width: 60px" placeholder="%">
+                Acesso:<input type="number" name="acesso" id="acesso" style="width: 60px" placeholder="%">
+                Entregas:<input type="number" name="entregas" id="entregas" style="width: 60px" placeholder="%">
+                Robô:<input type="number" name="robo" id="robo" style="width: 60px" placeholder="%">
+            </p>
+
+            <p>
+                Gestão:<input type="text" name="gestao" id="gestao" style="width: 130px">
+                APP:<input type="text" name="app" id="app" style="width: 130px">
+                APLA:<input type="text" name="apla" id="apla" style="width: 130px">
+            </p>
 
         </article>
 
@@ -153,12 +195,17 @@
         <h4>
             Considerações Finais
         </h4>
+
         <p id="finais">
-            <textarea name="consideracoes" id="consideracoes" cols="76" rows="12" placeholder="Preencher com observações pertinentes sobre esta consultoria para futuras consultas e auxílio nas próximas consultorias"></textarea>
+            <textarea name="consideracoes" id="consideracoes" cols="76" rows="12" placeholder="Preencher com observações pertinentes sobre esta consultoria para futuras consultas e auxílio nas próximas consultorias.
+            
+
+            >> Se digitar algo, deve atualizar a página para conseguir carregar novamente os dados aqui <<"></textarea>
     
         </p>
         <p id="botao">
-            <abbr title="Gerar"><img src="gerar2.png" alt="gerar" onclick="gerar1()" id="botao1"></abbr>
+            <abbr title="Gerar Migração"><img src="gerarMigracao.png" alt="gerar" onclick="botaoMigração()" id="botao3"></abbr>
+            <abbr title="Gerar Etapa 1"><img src="gerar2.png" alt="gerar" onclick="gerar1()" id="botao1"></abbr>
             <abbr title="Gerar"><img src="gerar.png" alt="gerar" onclick="gerar()" id="botao2"></abbr>
             <abbr title="Copiar"><img src="copiar.png" alt="copiar" onclick="copiarTexto()"></abbr>
         </p>

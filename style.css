@@ -50,6 +50,7 @@ input {
     margin-top: 10px;
 }
 
+
 #container > article > p {
     padding: 9px;
     margin: 0px;
@@ -72,6 +73,11 @@ textarea{
 }
 
 #botao2 {
+    text-align: center;
+    display: none;
+}
+
+#botao3 {
     text-align: center;
     display: none;
 }
