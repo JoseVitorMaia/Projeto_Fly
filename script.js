@@ -89,6 +89,7 @@ function migração(){
 function botaoMigração(){
     consideracoes.innerHTML = '';
 
+    consideracoes.innerHTML += '** Checkout Migração **' + "\n" + "\n"
     consideracoes.innerHTML += '- Valor do Acessórias: ' + valorMigra.value +  "\n"
     consideracoes.innerHTML += '- Referencia técnica e seu departamento: ' + referenciaMigra.value + "\n"
     consideracoes.innerHTML += '- Melhor forma de contato: ' + formaContato.value + "\n"
