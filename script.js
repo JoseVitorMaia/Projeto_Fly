@@ -110,6 +110,7 @@ function botaoMigração(){
 function gerar1(){
     consideracoes.innerHTML = '';
 
+    consideracoes.innerHTML += '** Check in primeira etapa **' + "\n" + "\n"
     consideracoes.innerHTML += '- Dono do escritório : ' + dono.value + "\n"
     consideracoes.innerHTML += '- Responsavel Técnico : ' + resp.value + "\n"
     consideracoes.innerHTML += '- Quem participou da consultoria : ' + quem.value + "\n"
